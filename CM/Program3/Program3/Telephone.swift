@@ -9,13 +9,14 @@ import Foundation
 
 func readData() {
     print("¿Cuál es el número que quieres verificar?")
-    let input = readLine()!
+    guard let input = readLine() else { return }
     verifyNumber(number: input)
 }
 
 func verifyNumber(number: String) {
-//         ^\\(|\\?\d{2}\\)|\\?\-?\d{2}\-?\d{4}\-?\d{4} -> acepta parentesis pero igual acepta mas formatos que no queremos.
-    let regex = NSRegularExpression(#"\([0-9]{2}\)-[0-9]{2}-[0-9]{4}-[0-9]{2}"#)
+//   En swift 5 ya no es necesario escapar con doble backslash.
+//   Hay un problema en Xcode donde no toma de forma correcta los parentesis escapados.
+    let regex = NSRegularExpression(#"\([0-9]{2}\)-[0-9]{2}-[0-9]{4}-[0-9]{4}"#)
     if regex.matches(number) == true {
         print("El número si es válido. \n")
         print("¿Te gustaría probar otro número? 1-Si, 2-No")

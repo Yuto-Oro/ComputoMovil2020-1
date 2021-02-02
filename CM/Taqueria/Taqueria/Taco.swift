@@ -22,31 +22,48 @@ protocol Ingredientes {
 typealias Tacoable = Costo & Ingredientes
 
 struct SimpleTaco: Tacoable {
-    var tipoTaco: String
     let cost: Double = 0.0
-    let ingredients: [String] = ["Tortilla"]
-    init(tipoTaco: String) {
-        self.tipoTaco = tipoTaco
-    }
-}
-
-struct TacoPastor: Tacoable {
-    let cost: Double = 12.0
-    let ingredients = ["Tortilla", "Pastor"]
-}
-
-struct TacoSuadero: Tacoable {
-    let cost: Double = 12.0
-    let ingredients = ["Tortilla", "Suadero"]
-}
-
-struct TacoCarnitas: Tacoable {
-    let cost: Double = 15.0
-    let ingredients: [String] = ["Tortilla","Carnitas"]
+    let ingredients: [String] = ["Plato"]
 }
 
 protocol UsaExtras: Tacoable {
     var toppings: Tacoable { get }
+}
+
+struct Carnitas: UsaExtras {
+    let toppings: Tacoable
+    
+    var cost: Double {
+        return toppings.cost + 15
+    }
+    
+    var ingredients: [String] {
+        return toppings.ingredients + ["Taco Carnitas"]
+    }
+}
+
+struct Pastor: UsaExtras {
+    let toppings: Tacoable
+    
+    var cost: Double {
+        return toppings.cost + 12
+    }
+    
+    var ingredients: [String] {
+        return toppings.ingredients + ["Taco Pastor"]
+    }
+}
+
+struct Suadero: UsaExtras {
+    let toppings: Tacoable
+    
+    var cost: Double {
+        return toppings.cost + 12
+    }
+    
+    var ingredients: [String] {
+        return toppings.ingredients + ["Taco Suadero"]
+    }
 }
 
 struct OrdenSalsa: UsaExtras {
@@ -113,21 +130,22 @@ struct Refresco: Bebida {
     }
 }
 
-func generateOrder(order:[String]) {
-    var someTaco: Tacoable
-    let ordenes = order.map({$0.lowercased()})
-    for orden in ordenes {
-        someTaco = SimpleTaco(tipoTaco: orden)
-        print("Cost: \(someTaco.cost); Ingredients: \(someTaco.ingredients)")
-    }
-}
-
 func pideTaco() {
-    print("-----Menú------")
-    print("1-Pastor, 2-Suadero, 3-Carnitas")
-    print("4-Orden Salsa, 5-Orden Limon, 6-Orden cilantro 7-Orden cebolla")
-    print("8-Refresco, 9-Pedir la cuenta")
-    print("Ingrese su orden separada por ',' .")
-    guard let input = readLine() else { return }
-    generateOrder(order: input.components(separatedBy: ","))
+    var someTaco: Tacoable = SimpleTaco()
+    someTaco = Pastor(toppings: someTaco)
+    print("Cost: \(someTaco.cost); Ingredients: \(someTaco.ingredients)")
+    someTaco = Carnitas(toppings: someTaco)
+    print("Cost: \(someTaco.cost); Ingredients: \(someTaco.ingredients)")
+    someTaco = Suadero(toppings: someTaco)
+    print("Cost: \(someTaco.cost); Ingredients: \(someTaco.ingredients)")
+    someTaco = OrdenLimon(toppings: someTaco)
+    print("Cost: \(someTaco.cost); Ingredients: \(someTaco.ingredients)")
+    someTaco = OrdenCebolla(toppings: someTaco)
+    print("Cost: \(someTaco.cost); Ingredients: \(someTaco.ingredients)")
+    someTaco = OrdenSalsa(toppings: someTaco)
+    print("Cost: \(someTaco.cost); Ingredients: \(someTaco.ingredients)")
+    someTaco = OrdenCilantro(toppings: someTaco)
+    print("Cost: \(someTaco.cost); Ingredients: \(someTaco.ingredients)")
+    someTaco = Refresco(beverage: someTaco)
+    print("Cost: \(someTaco.cost); Ingredients: \(someTaco.ingredients)")
 }

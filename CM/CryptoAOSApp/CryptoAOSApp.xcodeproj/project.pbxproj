@@ -20,6 +20,7 @@
 		142B9AE625CE600C00A64C4C /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142B9AE525CE600B00A64C4C /* BalanceView.swift */; };
 		142B9AE925CE62C400A64C4C /* HorizontalProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142B9AE825CE62C400A64C4C /* HorizontalProgressView.swift */; };
 		142B9AEC25CE683600A64C4C /* TransferMoneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142B9AEB25CE683600A64C4C /* TransferMoneyView.swift */; };
+		142B9AEF25CF259D00A64C4C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142B9AEE25CF259D00A64C4C /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		142B9AE525CE600B00A64C4C /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
 		142B9AE825CE62C400A64C4C /* HorizontalProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalProgressView.swift; sourceTree = "<group>"; };
 		142B9AEB25CE683600A64C4C /* TransferMoneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferMoneyView.swift; sourceTree = "<group>"; };
+		142B9AEE25CF259D00A64C4C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				142B9AE525CE600B00A64C4C /* BalanceView.swift */,
 				142B9AE825CE62C400A64C4C /* HorizontalProgressView.swift */,
 				142B9AEB25CE683600A64C4C /* TransferMoneyView.swift */,
+				142B9AEE25CF259D00A64C4C /* LoginView.swift */,
 			);
 			path = CryptoAOSApp;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				142B9AD425CE447700A64C4C /* HeaderView.swift in Sources */,
 				142B9ADA25CE469800A64C4C /* Card.swift in Sources */,
 				142B9AE925CE62C400A64C4C /* HorizontalProgressView.swift in Sources */,
+				142B9AEF25CF259D00A64C4C /* LoginView.swift in Sources */,
 				142B9AD725CE467000A64C4C /* CardListView.swift in Sources */,
 				142B9AEC25CE683600A64C4C /* TransferMoneyView.swift in Sources */,
 				142B9AE625CE600C00A64C4C /* BalanceView.swift in Sources */,

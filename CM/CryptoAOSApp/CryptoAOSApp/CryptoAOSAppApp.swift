@@ -12,8 +12,10 @@ struct CryptoAOSAppApp: App {
     @StateObject private var wallet = Wallet()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView()
                 .environmentObject(wallet)
+//            ContentView()
+//                .environmentObject(wallet)
         }
     }
 }

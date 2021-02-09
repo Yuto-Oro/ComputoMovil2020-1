@@ -8,9 +8,23 @@
 import SwiftUI
 
 struct LoginView: View {
+    @EnvironmentObject var session: SessionStore
     @State var email = ""
     @State var password = ""
     @State var isActive = false
+    @State var error: String = ""
+    
+    func signIn() {
+        session.signIn(email: email, password: password) { (result, error) in
+            if let error = error {
+                self.error = error.localizedDescription
+            } else {
+                self.email = ""
+                self.password = ""
+            }
+        }
+    }
+    
     var body: some View {
         NavigationView {
             VStack(spacing: 15) {
@@ -37,11 +51,11 @@ struct LoginView: View {
                 .background(Color.primaryColor2)
                 .cornerRadius(8)
                 .padding(.horizontal, 20)
-                NavigationLink(destination: ContentView(), isActive: $isActive) {
+                NavigationLink(destination: SignUpView(), isActive: $isActive) {
                     Button(action: {
                         isActive = true
                     }) {
-                        Text("Login")
+                        Text("Sign Up")
                             .foregroundColor(.black)
                             .font(.system(size: 24, weight: .medium))
                     }
@@ -49,6 +63,27 @@ struct LoginView: View {
                 .padding(.vertical, 20)
                 .background(Color.primaryColor3)
                 .padding(.horizontal, 20)
+                NavigationLink(destination: ContentView(), isActive: $isActive) {
+                    Button(action: {
+                        isActive = true
+                        signIn()
+                    }) {
+                        Text("Sign In")
+                            .foregroundColor(.black)
+                            .font(.system(size: 24, weight: .medium))
+                    }
+                }.frame(maxWidth: .infinity)
+                .padding(.vertical, 20)
+                .background(Color.primaryColor3)
+                .padding(.horizontal, 20)
+                
+                if(error != ""){
+                    Text(error)
+                        .font(.system(size: 14, weight: .semibold))
+                        .foregroundColor(.red)
+                        .padding()
+                }
+                
                 Spacer()
             }.background(Image("CryptoAOS_PDF")
                             .resizable()
@@ -62,5 +97,6 @@ struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
             .environmentObject(Wallet())
+            .environmentObject(SessionStore())
     }
 }

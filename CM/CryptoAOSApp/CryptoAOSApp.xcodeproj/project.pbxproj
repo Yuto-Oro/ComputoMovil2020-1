@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,12 @@
 		142B9AE925CE62C400A64C4C /* HorizontalProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142B9AE825CE62C400A64C4C /* HorizontalProgressView.swift */; };
 		142B9AEC25CE683600A64C4C /* TransferMoneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142B9AEB25CE683600A64C4C /* TransferMoneyView.swift */; };
 		142B9AEF25CF259D00A64C4C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142B9AEE25CF259D00A64C4C /* LoginView.swift */; };
+		142B9AF225D20C4500A64C4C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 142B9AF125D20C4500A64C4C /* GoogleService-Info.plist */; };
+		1463C1A625D232EC00293B6B /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1463C1A525D232EC00293B6B /* SessionStore.swift */; };
+		1463C1AB25D23EC800293B6B /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1463C1AA25D23EC800293B6B /* SignUpView.swift */; };
+		1463C1AE25D24DA000293B6B /* CoinList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1463C1AD25D24DA000293B6B /* CoinList.swift */; };
+		1463C1B125D24E5D00293B6B /* CryptoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1463C1B025D24E5D00293B6B /* CryptoService.swift */; };
+		EEBA19BCF4CAF8B17F507DFE /* Pods_CryptoAOSApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF04A52F5C439AF58A572E7B /* Pods_CryptoAOSApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +46,14 @@
 		142B9AE825CE62C400A64C4C /* HorizontalProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalProgressView.swift; sourceTree = "<group>"; };
 		142B9AEB25CE683600A64C4C /* TransferMoneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferMoneyView.swift; sourceTree = "<group>"; };
 		142B9AEE25CF259D00A64C4C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		142B9AF125D20C4500A64C4C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1463C1A525D232EC00293B6B /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
+		1463C1AA25D23EC800293B6B /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		1463C1AD25D24DA000293B6B /* CoinList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinList.swift; sourceTree = "<group>"; };
+		1463C1B025D24E5D00293B6B /* CryptoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoService.swift; sourceTree = "<group>"; };
+		7121D8BC8F5323B8617F129E /* Pods-CryptoAOSApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoAOSApp.debug.xcconfig"; path = "Target Support Files/Pods-CryptoAOSApp/Pods-CryptoAOSApp.debug.xcconfig"; sourceTree = "<group>"; };
+		DF04A52F5C439AF58A572E7B /* Pods_CryptoAOSApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoAOSApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4B73DDCAACB3401837ADED3 /* Pods-CryptoAOSApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoAOSApp.release.xcconfig"; path = "Target Support Files/Pods-CryptoAOSApp/Pods-CryptoAOSApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEBA19BCF4CAF8B17F507DFE /* Pods_CryptoAOSApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +73,8 @@
 			children = (
 				142B9AC225CE2E3300A64C4C /* CryptoAOSApp */,
 				142B9AC125CE2E3300A64C4C /* Products */,
+				97E118085EFB121D736723D8 /* Pods */,
+				E6543412EBD57D72899BD466 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +89,7 @@
 		142B9AC225CE2E3300A64C4C /* CryptoAOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				142B9AF125D20C4500A64C4C /* GoogleService-Info.plist */,
 				142B9AC325CE2E3300A64C4C /* CryptoAOSAppApp.swift */,
 				142B9AC525CE2E3300A64C4C /* ContentView.swift */,
 				142B9AC725CE2E3700A64C4C /* Assets.xcassets */,
@@ -87,6 +105,10 @@
 				142B9AE825CE62C400A64C4C /* HorizontalProgressView.swift */,
 				142B9AEB25CE683600A64C4C /* TransferMoneyView.swift */,
 				142B9AEE25CF259D00A64C4C /* LoginView.swift */,
+				1463C1A525D232EC00293B6B /* SessionStore.swift */,
+				1463C1AA25D23EC800293B6B /* SignUpView.swift */,
+				1463C1AD25D24DA000293B6B /* CoinList.swift */,
+				1463C1B025D24E5D00293B6B /* CryptoService.swift */,
 			);
 			path = CryptoAOSApp;
 			sourceTree = "<group>";
@@ -99,6 +121,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		97E118085EFB121D736723D8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7121D8BC8F5323B8617F129E /* Pods-CryptoAOSApp.debug.xcconfig */,
+				F4B73DDCAACB3401837ADED3 /* Pods-CryptoAOSApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E6543412EBD57D72899BD466 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF04A52F5C439AF58A572E7B /* Pods_CryptoAOSApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +145,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 142B9ACF25CE2E3700A64C4C /* Build configuration list for PBXNativeTarget "CryptoAOSApp" */;
 			buildPhases = (
+				877BE3E5417A639E51C71591 /* [CP] Check Pods Manifest.lock */,
 				142B9ABC25CE2E3300A64C4C /* Sources */,
 				142B9ABD25CE2E3300A64C4C /* Frameworks */,
 				142B9ABE25CE2E3300A64C4C /* Resources */,
+				9881D79600BC7147A724E0ED /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -158,25 +199,72 @@
 			files = (
 				142B9ACB25CE2E3700A64C4C /* Preview Assets.xcassets in Resources */,
 				142B9AC825CE2E3700A64C4C /* Assets.xcassets in Resources */,
+				142B9AF225D20C4500A64C4C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		877BE3E5417A639E51C71591 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CryptoAOSApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9881D79600BC7147A724E0ED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CryptoAOSApp/Pods-CryptoAOSApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CryptoAOSApp/Pods-CryptoAOSApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CryptoAOSApp/Pods-CryptoAOSApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		142B9ABC25CE2E3300A64C4C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1463C1B125D24E5D00293B6B /* CryptoService.swift in Sources */,
 				142B9AE025CE4D7800A64C4C /* CardView.swift in Sources */,
 				142B9AC625CE2E3300A64C4C /* ContentView.swift in Sources */,
 				142B9ADD25CE474E00A64C4C /* MockData.swift in Sources */,
+				1463C1AE25D24DA000293B6B /* CoinList.swift in Sources */,
 				142B9AD425CE447700A64C4C /* HeaderView.swift in Sources */,
 				142B9ADA25CE469800A64C4C /* Card.swift in Sources */,
 				142B9AE925CE62C400A64C4C /* HorizontalProgressView.swift in Sources */,
 				142B9AEF25CF259D00A64C4C /* LoginView.swift in Sources */,
+				1463C1A625D232EC00293B6B /* SessionStore.swift in Sources */,
 				142B9AD725CE467000A64C4C /* CardListView.swift in Sources */,
 				142B9AEC25CE683600A64C4C /* TransferMoneyView.swift in Sources */,
+				1463C1AB25D23EC800293B6B /* SignUpView.swift in Sources */,
 				142B9AE625CE600C00A64C4C /* BalanceView.swift in Sources */,
 				142B9AC425CE2E3300A64C4C /* CryptoAOSAppApp.swift in Sources */,
 				142B9AE325CE4EEA00A64C4C /* Color+Extension.swift in Sources */,
@@ -304,6 +392,7 @@
 		};
 		142B9AD025CE2E3700A64C4C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7121D8BC8F5323B8617F129E /* Pods-CryptoAOSApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -325,6 +414,7 @@
 		};
 		142B9AD125CE2E3700A64C4C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4B73DDCAACB3401837ADED3 /* Pods-CryptoAOSApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

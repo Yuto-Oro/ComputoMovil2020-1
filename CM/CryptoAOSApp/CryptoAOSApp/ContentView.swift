@@ -9,14 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ScrollView {
-            VStack(spacing: 35) {
-                HeaderView()
-                CardListView()
-                BalanceView()
-                TransferMoneyView()
-                Spacer()
-            }.padding(25)
+        TabView {
+            ScrollView {
+                VStack(spacing: 35) {
+                    HeaderView()
+                    CardListView()
+                    BalanceView()
+                    TransferMoneyView()
+                    Spacer()
+                }.padding(25)
+            }
+            .tabItem {
+                Image(systemName: "house")
+            }.accentColor(.primaryColor1)
+            CoinList()
+                .tabItem {
+                    Image(systemName: "bitcoinsign.circle")
+                }
         }
     }
 }
